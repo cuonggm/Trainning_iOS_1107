@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F2104" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="wCB-mi-gD0">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Second-->
+        <scene sceneID="aVw-qQ-d5E">
+            <objects>
+                <viewController id="MQC-zh-eqY" customClass="SecondViewController" customModule="Bai3_Excercise1" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WN7-Of-P7l"/>
+                        <viewControllerLayoutGuide type="bottom" id="Of6-7c-Erl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qxB-MD-lsq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Second" id="RT8-la-ujw"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WBv-dZ-LKw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="197.59999999999999" y="125.4872563718141"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="nMQ-ry-8ml">
+            <objects>
+                <tabBarController id="wCB-mi-gD0" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="Cx7-Rp-sOQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="eZc-Qp-SvA" kind="relationship" relationship="viewControllers" id="Nag-ek-MnK"/>
+                        <segue destination="MQC-zh-eqY" kind="relationship" relationship="viewControllers" id="gCS-Fv-RaZ"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w9a-wD-NlU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-855" y="-188"/>
+        </scene>
+        <!--First-->
+        <scene sceneID="kHR-KI-d1d">
+            <objects>
+                <viewController id="eZc-Qp-SvA" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sto-53-yGz"/>
+                        <viewControllerLayoutGuide type="bottom" id="HtP-rN-QQ2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bfa-nC-exi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tlv-Ep-5IG" userLabel="Gray">
+                                <rect key="frame" x="16" y="20" width="343" height="130"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="XhO-oh-keU"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jbC-pk-pAA" userLabel="Red">
+                                <rect key="frame" x="137.5" y="498" width="100" height="100"/>
+                                <color key="backgroundColor" red="1" green="0.28846080909999999" blue="0.2981751869" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="K0G-hg-g3o"/>
+                                    <constraint firstAttribute="width" constant="100" id="W6I-Ge-LeN"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I have some longer text here that i want to warp onto multiple lines." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="snS-Ta-VQX" userLabel="Label">
+                                <rect key="frame" x="16" y="170" width="243" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cLu-tv-law" userLabel="Blue">
+                                <rect key="frame" x="259" y="170" width="100" height="100"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="1s7-N3-R9z"/>
+                                    <constraint firstAttribute="height" constant="100" id="hba-aX-pB7"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="snS-Ta-VQX" firstAttribute="leading" secondItem="bfa-nC-exi" secondAttribute="leadingMargin" id="0vF-2L-slq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="tlv-Ep-5IG" secondAttribute="trailing" id="1dd-LQ-mfe"/>
+                            <constraint firstItem="cLu-tv-law" firstAttribute="leading" secondItem="snS-Ta-VQX" secondAttribute="trailing" id="IhP-jd-N3l"/>
+                            <constraint firstItem="jbC-pk-pAA" firstAttribute="centerX" secondItem="bfa-nC-exi" secondAttribute="centerX" id="Mix-N8-JIf"/>
+                            <constraint firstItem="HtP-rN-QQ2" firstAttribute="top" secondItem="jbC-pk-pAA" secondAttribute="bottom" constant="20" id="O91-GE-Jfo"/>
+                            <constraint firstItem="tlv-Ep-5IG" firstAttribute="leading" secondItem="bfa-nC-exi" secondAttribute="leadingMargin" id="OE5-76-eAz"/>
+                            <constraint firstItem="snS-Ta-VQX" firstAttribute="top" secondItem="cLu-tv-law" secondAttribute="top" id="PMU-m6-cra"/>
+                            <constraint firstItem="cLu-tv-law" firstAttribute="top" secondItem="tlv-Ep-5IG" secondAttribute="bottom" constant="20" id="UXR-dQ-TsF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cLu-tv-law" secondAttribute="trailing" id="aAI-fq-gVq"/>
+                            <constraint firstItem="tlv-Ep-5IG" firstAttribute="top" secondItem="sto-53-yGz" secondAttribute="bottom" id="xLj-e4-Uo7"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="First" id="zcl-Ie-iyO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YvK-bH-obb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="197.59999999999999" y="-555.47226386806597"/>
+        </scene>
+    </scenes>
+</document>
