@@ -23,8 +23,11 @@ class ItuneConnection {
             if error == nil {
                 do {
                     let dict = try JSONSerialization.jsonObject(with: data!, options: .allowFragments) as! [String: Any]
+                    let count = dict["resultCount"] as! Float
                     let resultsArray = dict["results"] as! [[String: Any]]
-                    for song in resultsArray {
+                    for i in 0...(resultsArray.count-1) {
+                        
+                        let song = resultsArray[i]
                         let trackName = song["trackName"] as? String
                         let artistName = song["artistName"] as? String
                         let artworkUrl100 = song["artworkUrl100"] as? String
@@ -34,6 +37,7 @@ class ItuneConnection {
                         
                         let songObject = Song(trackName: trackName ?? "", artistName: artistName ?? "", artworkUrl100: artworkUrl100 ?? "", trackPrice: String(trackPrice ?? 0.0), releaseDate: releaseDate ?? "", collectionName: collectionName ?? "")
                             complete(songObject)
+                            NotificationCenter.default.post(name: NSNotification.Name(keyForProgress), object: self, userInfo: ["progress": Float(i+1)/count])
                     }
                     
                 } catch {}
