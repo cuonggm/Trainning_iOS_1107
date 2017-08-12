@@ -28,6 +28,10 @@ class TabBarController: UITabBarController {
         
         // position remove bar above tab bar
         setupMusicRemoteView()
+        
+        DispatchQueue.main.async {
+            self.checkPermissionDenied()
+        }
     }
     
     // MARK: Methods
@@ -49,6 +53,18 @@ class TabBarController: UITabBarController {
         view.addSubview(musicRemoteView)
         musicRemoteView.setVisible(bool: false)
         musicRemoteView.tabBarController = self
+    }
+    
+    // check Permission Denied
+    func checkPermissionDenied() {
+        MPMediaLibrary.requestAuthorization { (status) in
+            if status == .denied {
+                print("Denied roi")
+                let alert = UIAlertController(title: "Permission Denied", message: "Your app is not allowed to access Music Library!\n Go Setting -> Music App -> Turn on permission and restart your app.", preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "OK! Understood ...", style: UIAlertActionStyle.cancel, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+            }
+        }
     }
     
     // present Playing View Controller
